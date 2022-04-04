@@ -1,0 +1,71 @@
+.pg {
+    background-image: url("/src/home2.png");
+    height: 25%;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box1 {
+    background-color: rgb(238, 231, 238);
+    background-image: url('/src/Logo.png');
+    width: 10%;
+    height: 60pt;
+    position: relative;
+    background-repeat: no-repeat;
+    left: 43%;
+    top: 15px;
+}
+
+.box2 {
+    width: 70%;
+    height: 368pt;
+    position: relative;
+    left: 30%;
+    top: 10px;
+    margin-left: -150px;
+    padding-top: 140px;
+}
+
+.button {
+    background-color: #dbdae0ea;
+    border: 2px solid rgb(11, 9, 9);
+    color: rgb(15, 11, 11);
+    padding: 20px;
+    padding-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 20px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
