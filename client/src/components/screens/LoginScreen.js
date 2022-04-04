@@ -66,7 +66,11 @@ const LoginScreen = ()=>{
                     <label className="float-left form-check-label"><input type="checkbox" onClick={showPassword} /> Show Password</label>
                 </div><br/>
                 <div className="form-group">
+
                 <Link to={"/Home"}><button type="submit" className="btn btn-primary btn-block"><i class="fa fa-leaf" aria-hidden="true"></i> Log in</button></Link>
+
+                    <button type="submit" className="btn btn-primary btn-block"><i class="fa fa-leaf" aria-hidden="true"></i> Log in</button>
+
                 </div><br/>
                 <div className="clearfix">
                    <Link to="/forgotpassword" className="float-right" style={{textDecoration:"none", float:"left"}}><b> Forgot Password 🥺?</b></Link><br/><br/>
@@ -78,5 +82,4 @@ const LoginScreen = ()=>{
         </div>
     )
 }
-//<center> <h2 className="text-center" style={{color:"white"}}>Log in <i class="fa fa-grav" aria-hidden="true"></i></h2></center> 
 export default LoginScreen;
