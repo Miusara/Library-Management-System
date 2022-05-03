@@ -11,6 +11,10 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    width: 100%;
+    height: 739px;
+
 }
 
 .box1 {
@@ -22,6 +26,7 @@ html {
     background-repeat: no-repeat;
     left: 20%;
     top: -15px;
+
 }
 
 .form-control,
@@ -36,7 +41,11 @@ html {
 }
 
 body {
+
+    background: #fff;
+
     background: #f6eded;
+
     font-family: 'Roboto', sans-serif;
 }
 
@@ -56,6 +65,11 @@ body {
 }
 
 .background {
+
+    width: 420px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 50px 0px;
     width: 400px;
     height: 660px;
     margin: 0 auto;
@@ -66,6 +80,7 @@ body {
 .background form {
     color: rgb(14, 12, 12);
     border-radius: 3px;
+    margin-top: 90px;
     margin-bottom: 15px;
     background: rgba(240, 242, 233, 0.601);
     padding: 30px;
@@ -99,4 +114,9 @@ body {
 .signup-form a {
     color: rgb(42, 176, 104);
     text-decoration: underline;
+}
+
+.image2 {
+    margin-top: -40px;
+    margin-left: 80px;
 }

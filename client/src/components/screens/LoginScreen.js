@@ -1,7 +1,14 @@
 import {useState} from "react";
+
+import { useNavigate} from "react-router-dom";
+import "./Slogin.css";
+import config from "../../config/config.json";
+import Logo from '../../Logo.png';
+
 import {Link , useNavigate} from "react-router-dom";
 import "./Slogin.css";
 import config from "../../config/config.json";
+
 
 const LoginScreen = ()=>{
 
@@ -21,11 +28,19 @@ const LoginScreen = ()=>{
         try {
 
           if(email === config.admin1.email && password === config.admin1.password){
+
+            history("/Home");  
+           }
+
+           else if(email === config.admin2.email && password === config.admin2.password){
+            history("/Home");  
+
             history("/admin1");  
            }
 
            else if(email === config.admin2.email && password === config.admin2.password){
             history("/admin2");  
+
            }
 
            else 
@@ -46,26 +61,51 @@ const LoginScreen = ()=>{
         }
       }
 
+
+
+
     return(
         <div className=" bg0">
            <div className="background" style={{opacity:"0.8" , marginLeft:"550px" }} >
            <form onSubmit={loginHandler} >
+
+           <div className=" image2"> 
+   <center>
+     <img src={Logo} alt="Logo" width="200px"/>
+   </center>
+                 </div>
+                {error && <span className="badge bg-warning">{error}</span>} 
+               
+                <label htmlFor='subject'>Email</label>  
+
              <div class="box1"></div>
                  
                 {error && <span className="badge bg-warning">{error}</span>}     
+
                 <div className="form-group">
                     <input type="email" style={{width:"350px"}} className="form-control" placeholder="📧 Email" required="required" pattern="[0-9a-zA-Z%&$@.]+@[a-zA-Z]+\.+[a-zA-Z]{2,3}"
                     value = {email} onChange = {(e)=>setEmail(e.target.value)}
                     />
                 </div><br/>
+
+                <label htmlFor='subject'>Password</label>  
+
                 <div className="form-group">
                     <input type="password" style={{width:"350px"}} className="form-control" placeholder="🔐 Password" required="required" id="myInput"
                     value = {password} onChange = {(e)=>setPassword(e.target.value)}
                     />
+
+                    <br/>
+
                     <br/><br/>
+
                     <label className="float-left form-check-label"><input type="checkbox" onClick={showPassword} /> Show Password</label>
                 </div><br/>
                 <div className="form-group">
+
+
+                <button type="submit" className="btn btn-primary btn-block"><i aria-hidden="true" onsubmit="/Home"></i> Log in</button>
+                </div>    
 
                 <Link to={"/Home"}><button type="submit" className="btn btn-primary btn-block"><i class="fa fa-leaf" aria-hidden="true"></i> Log in</button></Link>
 
@@ -76,6 +116,7 @@ const LoginScreen = ()=>{
                    <Link to="/forgotpassword" className="float-right" style={{textDecoration:"none", float:"left"}}><b> Forgot Password 🥺?</b></Link><br/><br/>
                    
                 </div>        
+
             </form>
            
            </div>

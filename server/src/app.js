@@ -19,8 +19,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Book Managements
 //variable declaration and import model file
+const bookRouter = require("./api/routes/bookRoutes/bookRoutes.js");
+app.use("/books", bookRouter);
+
+//Author Managements
+//variable declaration and import model file
+const authorRouter = require("./api/routes/bookRoutes/authorRoutes.js");
+app.use("/authors", authorRouter);
+
+//Recomended book Managements
+//variable declaration and import model file
+const recommendRouter = require("./api/routes/memberRoutes/recommend.js");
+app.use("/recommend", recommendRouter);
+
+//Recomended Ebook Managements
+//variable declaration and import model file
+const EbookRouter = require("./api/routes/bookRoutes/ebookRoutes.js");
+app.use("/ebooks", EbookRouter);
+
 const bookRouter = require("./api/routes/bookRoutes.js");
 app.use("/books", bookRouter);
+
 
 
 app.listen(PORT, () => {
