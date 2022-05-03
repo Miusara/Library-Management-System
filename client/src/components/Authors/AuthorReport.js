@@ -70,7 +70,7 @@ export default function AuthorReport() {
                     <div className='col-lg-8 col-md m-auto'>
                         <div className='container'>
                             <div className="row g-3"> 
-                                <div style={{background:"#fdd"}}>&nbsp;&nbsp;&nbsp; 
+                                <div style={{background:" #ffffcc"}}>&nbsp;&nbsp;&nbsp; 
                         
                                     <h1 className="text-black h1"> Author Detail Report </h1><br/>
                                 
@@ -78,7 +78,7 @@ export default function AuthorReport() {
                                         <input type="text" onChange={(event) =>handleSearch(event)} />
                                     <br/><br/>
                                 
-                                    <div className="card container d-flex justify-content-center">
+                                    <div style={{background:"#fff"}} className="card container d-flex justify-content-center">
                                         <table className="table table-hover">
                                             <thead>
                                                 <tr>

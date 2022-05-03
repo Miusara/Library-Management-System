@@ -9,6 +9,9 @@ import UpdateBooks from './components/Books/UpdateBooks';
 import SearchBooks from './components/Books/SearchBooks';
 import AddAuthors from './components/Authors/AddAuthor';
 import AllAuthors from './components/Authors/AllAuthors';
+
+import SearchAuthors from './components/Authors/SearchAuthors';
+
 import RecomendedBooks from './components/Books/RecomendedBooks';
 import AuthorReport from './components/Authors/AuthorReport';
 import BookReport from './components/Books/BookReport';
@@ -32,6 +35,7 @@ function App() {
                     <Route path='/RecomendedBooks' element={< RecomendedBooks/>} />
                     <Route path='/AddAuthors' element={< AddAuthors />} />
                     <Route path='/AllAuthors' element={< AllAuthors/>} />
+                    <Route path='/SearchAuthors' element={< SearchAuthors/>} />
                     <Route path='/AuthorReport' element={< AuthorReport/>} />
                     <Route path='/BookReport' element={< BookReport/>} />
                     <Route path='/AddEBooks' element={< AddEBooks/>} />
