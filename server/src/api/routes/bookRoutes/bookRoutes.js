@@ -1,5 +1,5 @@
 const router = require("express").Router();
-let Books = require("../model/Book");
+let Books = require("../../model/Books/Book");
 
 //call create method
 router.route("/add").post((req, res) => {
@@ -91,7 +91,7 @@ router.route("/search/:ISBN").get(async(req, res) => {
             res.status(200).send({ status: "data fetched", book });
         }).catch((err) => {
             console.log(err.message);
-            res.status(500).send({ status: "Error with fetch user", error: err.mrssage });
+            res.status(500).send({ status: "Error with fetch book", error: err.mrssage });
         })
 })
 
