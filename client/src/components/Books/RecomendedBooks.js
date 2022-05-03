@@ -52,7 +52,7 @@ export default function RecomendedBooks() {
         <> 
        <Navbar/>
             <br></br><br></br>
-                    <div className="card container" style={{background:"#adb5bd "}}>&nbsp;&nbsp;&nbsp;  
+                    <div className="card container" style={{background:" #ffffcc"}}>&nbsp;&nbsp;&nbsp;  
                         <center><h5 class="text-black">RECOMMENDED BOOKS </h5></center>&nbsp;&nbsp;&nbsp; 
 
                         <div>

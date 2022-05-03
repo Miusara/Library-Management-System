@@ -2,7 +2,7 @@
 .footer1 {
     height: 80px;
     padding: 10px;
-    margin-top: 130px;
+    margin-top: 100px;
     border: 2px solid #000000;
     background-color: #f3f3f3;
     color: black;
@@ -32,7 +32,7 @@
 .footer4 {
     height: 80px;
     padding: 10px;
-    margin-top: 80px;
+    margin-top: 50px;
     border: 2px solid #000000;
     background-color: #f3f3f3;
     color: black;
@@ -42,7 +42,7 @@
 .footer5 {
     height: 80px;
     padding: 10px;
-    margin-top: 60px;
+    margin-top: 120px;
     border: 2px solid #000000;
     background-color: #f3f3f3;
     color: black;
@@ -62,7 +62,7 @@
 .footer7 {
     height: 80px;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: -10px;
     border: 2px solid #000000;
     background-color: #f3f3f3;
     color: black;
@@ -113,14 +113,14 @@
 
 .sbuttons {
     position: absolute;
-    top: 670px;
+    top: 690px;
     right: 7%;
     text-align: right;
 }
 
 .p {
     position: absolute;
-    top: 690px;
+    top: 695px;
     width: 90%;
     right: 3%;
     text-align: left;
@@ -158,14 +158,14 @@
 
 .sbuttons4 {
     position: absolute;
-    top: 730px;
+    top: 760px;
     right: 7%;
     text-align: right;
 }
 
 .p4 {
     position: absolute;
-    top: 740px;
+    top: 780px;
     width: 90%;
     right: 3%;
     text-align: left;

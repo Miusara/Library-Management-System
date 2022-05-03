@@ -37,10 +37,6 @@ app.use("/recommend", recommendRouter);
 const EbookRouter = require("./api/routes/bookRoutes/ebookRoutes.js");
 app.use("/ebooks", EbookRouter);
 
-const bookRouter = require("./api/routes/bookRoutes.js");
-app.use("/books", bookRouter);
-
-
 
 app.listen(PORT, () => {
     logger.info(`Server is up and running on PORT ${PORT}`);
