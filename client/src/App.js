@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginScreen from "./components/screens/LoginScreen";
 import Home from "../src/components/Home";
+
 import AddBooks from './components/Books/AddBook';
 import AllBooks from './components/Books/AllBooks';
 import UpdateBooks from './components/Books/UpdateBooks';
@@ -15,11 +16,13 @@ import AddEBooks from './components/Books/AddEbook';
 import DisplayEBooks from './components/Books/AllEBooks';
 
 
+
 function App() {
     return ( 
         <div className = 'App'>
             <Router>
                 <Routes>
+
                     <Route path = '/' element = { < LoginScreen /> } />
                     <Route path="/home" element = { < Home /> } />
                     <Route path='/AddBooks' element={< AddBooks />} />
@@ -34,6 +37,11 @@ function App() {
                     <Route path='/AddEBooks' element={< AddEBooks/>} />
                     <Route path='/DisplayEBooks' element={< DisplayEBooks/>} />
                     
+
+                    <Route path = '/'element = { < LoginScreen /> } />
+                    <Route path="/home"element = { < Home /> } />
+
+
                 </Routes>  
             </Router>  
         </div>

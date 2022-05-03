@@ -3,8 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+
         "@material-ui/core": "^4.12.4",
         "@material-ui/icons": "^4.11.3",
+
         "@testing-library/jest-dom": "^5.16.3",
         "@testing-library/react": "^12.1.4",
         "@testing-library/user-event": "^13.5.0",
@@ -39,6 +41,7 @@
     },
     "devDependencies": {
         "axios": "^0.26.1",
+
         "jspdf": "^2.5.1",
         "jspdf-autotable": "^3.5.23",
         "react-file-base64": "^1.0.3",
@@ -52,3 +55,11 @@
     },
     "proxy": "http://localhost:8088"
 }
+
+        "react-router-dom": "^6.2.2"
+    },
+
+    "proxy": "http://localhost:8088"
+
+}
+
