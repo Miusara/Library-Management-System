@@ -1,5 +1,5 @@
 .pg {
-    background-image: url("/src/home2.png");
+  background-image: url("/src/home2.png");
     height: 739px;
     width: 100%;
     background-position: right;
@@ -8,7 +8,7 @@
 }
 
 .box1 {
-    background-image: url('../src/Logo.png');
+ background-image: url('../src/Logo.png');
     background-color: rgb(238, 231, 238);
     width: 10%;
     height: 60pt;
@@ -20,18 +20,21 @@
 
 .box2 {
     width: 50%;
-    height: 20pt;
+    height: 250pt;
     position: relative;
     left: 40%;
+    top: 2px;
     margin-left: -150px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .button {
     background-color: #fff;
     left: 43%;
     top: 15px;
+
 }
+
 
 .button {
     background-color: #dbdae0ea;
@@ -92,7 +95,7 @@
 }
 
 .button2 {
-    padding: 20px;
+ padding: 20px;
     padding-left: 900px;
     font-size: 20px;
     margin: 2px;
