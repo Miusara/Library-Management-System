@@ -42,6 +42,11 @@ app.use("/ebooks", EbookRouter);
 const TransactionRouter = require("./api/routes/Transaction/TransactionRoutes");
 app.use("/Transaction", TransactionRouter);
 
+//Recomended Ebook Managements
+//variable declaration and import model file
+const paymentsRouter = require("./api/routes/payments/paymentsRoutes");
+app.use("/payments", paymentsRouter);
+
 
 app.listen(PORT, () => {
     logger.info(`Server is up and running on PORT ${PORT}`);
