@@ -23,6 +23,13 @@ import TransactionHistory from './components/Transaction/TransactionHistory';
 import UpdateTransaction from './components/Transaction/UpdateTransaction';
 import TransactionReport from './components/Transaction/TransactionReport';
 
+import PaymentHome from './components/Payment/paymenthome';
+import AddDelaycharges from './components/Payment/Delaycharges';
+import Monthlyfee from './components/Payment/Monthlyfee';
+import PaymentHistory from './components/Payment/paymentHistory';
+import Updatefee from './components/Payment/UpdateFee';
+import PaymentReport from './components/Payment/PaymentReport';
+
 
 
 function App() {
@@ -50,6 +57,14 @@ function App() {
                     <Route path='/TransactionHistory' element={< TransactionHistory/>} />
                     <Route path='/UpdateTransaction' element={< UpdateTransaction/>} />
                     <Route path='/TransactionReport' element={< TransactionReport/>} />
+
+
+                    <Route path='/PaymentHome' element={< PaymentHome/>} />
+                    <Route path='/AddDelaycharges' element={< AddDelaycharges/>} />
+                    <Route path='/Monthlyfee' element={< Monthlyfee/>} />
+                    <Route path='/PaymentHistory' element={< PaymentHistory/>} />
+                    <Route path='/Updatefee' element={< Updatefee/>} />
+                    <Route path='/PaymentReport' element={< PaymentReport/>} />
 
                     
 
