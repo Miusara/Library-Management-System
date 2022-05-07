@@ -15,10 +15,11 @@ function Home() {
           <img src={Logo} alt="Logo" width="250px" />
         </div>
         <div className="box2">
-            <div className="button"><Link to="/AddBooks"><span>Books Management</span></Link></div>
+           <div className="button"><Link to="/AddBooks"><span>Books Management</span></Link></div>
             <div className="button"><Link to="/AddTransaction"><span>Transaction Management</span></Link></div>
             <div className="button"><span>Membership Management</span></div>
-            <div className="button"><span>Payment Management</span></div>
+            <div className="button"><Link to= "/PaymentHome"><span>Payment Management</span></Link></div>
+
        </div>
      </div>
     </>
