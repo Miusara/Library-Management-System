@@ -162,7 +162,7 @@
   </div>
   
     <div className='footer2'>
-    <Footer/>
+      <Footer/>
     </div>
 </>
 )       

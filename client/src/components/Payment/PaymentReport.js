@@ -31,7 +31,7 @@ export default class paymentReport extends Component {
   componentDidMount() {
     const USERID = localStorage.getItem("UserID");
     axios
-      .get(`http://localhost:8089/Transaction/getallTransactions/${USERID}`)
+      .get(`http://localhost:8089/payments/getallpayments/${USERID}`)
 
       .then((response) => {
         this.setState({ Payment: response.data.data });
@@ -56,14 +56,16 @@ export default class paymentReport extends Component {
         >
           Generate PDF
         </button>
-        <br />
-        <br />
-        <br />
+<br/>
+<br/>
+<br/>
         <div
           id="viewtable"
           style={{ marginLeft: "200px", marginRight: "200px" }}
         >
-          <h3 style={{ textAlign: "center" }}>All Transactions</h3>
+          <h3 style={{ textAlign: "center" }}>All Payments</h3>
+
+       
 
           <br></br>
           <table
@@ -78,17 +80,21 @@ export default class paymentReport extends Component {
             <thead>
               <tr>
                 <th scope="col">User Name</th>
-                <th scope="col">BookID</th>
-                <th scope="col">Borrow Date</th>
-                <th scope="col">Return Date</th>
+                <th scope="col">Titile</th>
+                <th scope="col">Payment Type</th>
+                <th scope="col">Card Type</th>
+                <th scope="col">Date</th>
+                <th scope="col">Amount</th>
               </tr>
               {this.state.Payment.length > 0 &&
                 this.state.Payment.map((item, index) => (
                   <tr>
-                    <th>{item.Username}</th>
-                    <td>{item.BookID}</td>
-                    <td>{item.Borrowdate}</td>
-                    <td>{item.ReturnDate}</td>
+                    <td>{item.Username}</td>
+                    <td>{item.paymentTitle}</td>
+                    <td>{item.Type}</td>
+                    <td>{item.CardType}</td>
+                    <td>{item.createdAt}</td>
+                    <td>{item.Amount}</td>
                   </tr>
                 ))}
             </thead>

@@ -1,49 +1,60 @@
 //call create method
 const router = require("express").Router();
-let Transaction = require("../../model/Transaction/TransactionModel");
+let Payment = require("../../model/Payments/paymentsModel");
 
 router.route("/add").post((req, res) => {
   //request(front end data) values get backend
 
   const {
+    CardName,
+    CardNumber,
+    EXPDate,
+    CVV,
     Username,
-    BookID,
-    Borrowdate,
-    ReturnDate,
+    CardType,
+    Amount,
     USERID,
+    Type,
+    paymentTitle,
   } = req.body;
 
-  const newTransaction = new Transaction({
+  const newPayment = new Payment({
+    //initialize the properties
+    CardName,
+    CardNumber,
+    EXPDate,
+    CVV,
     Username,
-    BookID,
-    Borrowdate,
-    ReturnDate,
+    CardType,
+    Amount,
     USERID,
+    Type,
+    paymentTitle,
   });
 
   //exception handling
-  newTransaction
+  newPayment
     .save()
     .then(() => {
-      res.json("New Transaction Added success...");
+      res.json("New Payment Added success...");
     })
     .catch((err) => {
       console.log(err);
     });
 }),
-  router.route("/getallTransactions/:id").get(async (req, res) => {
+  router.route("/getallpayments/:id").get(async (req, res) => {
     try {
       if (req.params && req.params.id) {
         console.log("ID is ", req.params.id);
 
-        const Transactions = await Transaction.find({ USERID: req.params.id });
+        const Payments = await Payment.find({ USERID: req.params.id });
 
         return res.status(200).json({
           code: 200,
           success: "Success",
           status: "OK",
-          data: Transactions,
-          message: "Transactions detail recieved",
+          data: Payments,
+          message: "Payments detail recieved",
         });
       }
     } catch (err) {
@@ -56,19 +67,19 @@ router.route("/add").post((req, res) => {
     }
   });
 
-router.route("/getallTransactionsbysearch/:name").get(async (req, res) => {
+router.route("/getallpaymentsbysearch/:name").get(async (req, res) => {
   try {
     if (req.params && req.params.name) {
       console.log("name is ", req.params.name);
 
-      const Transactions = await Transaction.find({ BookID: req.params.name });
+      const Payments = await Payment.find({ paymentTitle: req.params.name });
 
       return res.status(200).json({
         code: 200,
         success: "Success",
         status: "OK",
-        data: Transactions,
-        message: "Transactions detail recieved",
+        data: Payments,
+        message: "Payments detail recieved",
       });
     }
   } catch (err) {
@@ -81,18 +92,18 @@ router.route("/getallTransactionsbysearch/:name").get(async (req, res) => {
   }
 });
 
-router.route("/Transactiondelete/:id").delete(async (req, res) => {
+router.route("/paymentdelete/:id").delete(async (req, res) => {
   try {
     console.log("Delete! ", req.params.id);
     if (req.params && req.params.id) {
-      const Transactions = await Transaction.findByIdAndDelete(req.params.id);
+      const Payments = await Payment.findByIdAndDelete(req.params.id);
 
       return res.status(200).json({
         code: 200,
         success: "Success",
         status: "OK",
-        data: Transactions,
-        message: "Transaction is deleted!",
+        data: Payments,
+        message: "Payment is deleted!",
       });
     }
   } catch (err) {
@@ -105,19 +116,19 @@ router.route("/Transactiondelete/:id").delete(async (req, res) => {
   }
 });
 
-router.route("/getoneTransactionsforupdate/:id").get(async (req, res) => {
+router.route("/getonepaymentsforupdate/:id").get(async (req, res) => {
   try {
     if (req.params && req.params.id) {
       console.log("name is ", req.params.id);
 
-      const Transactions = await Transaction.findById({ _id: req.params.id });
+      const Payments = await Payment.findById({ _id: req.params.id });
 
       return res.status(200).json({
         code: 200,
         success: "Success",
         status: "OK",
-        data: Transactions,
-        message: "Transactions detail recieved",
+        data: Payments,
+        message: "Payments detail recieved",
       });
     }
   } catch (err) {
@@ -130,34 +141,44 @@ router.route("/getoneTransactionsforupdate/:id").get(async (req, res) => {
   }
 });
 
-router.route("/updateTransaction/:id").put(async (req, res) => {
+router.route("/updatepayment/:id").put(async (req, res) => {
   try {
     if (req.params && req.params.id) {
       console.log("Stage 01");
       const {
+        CardName,
+        CardNumber,
+        EXPDate,
+        CVV,
         Username,
-        BookID,
-        Borrowdate,
-        ReturnDate,
+        CardType,
+        Amount,
         USERID,
+        Type,
+        paymentTitle,
       } = req.body;
 
-      await Transaction.findByIdAndUpdate(req.params.id, {
+      await Payment.findByIdAndUpdate(req.params.id, {
+        CardName,
+        CardNumber,
+        EXPDate,
+        CVV,
         Username,
-        BookID,
-        Borrowdate,
-        ReturnDate,
+        CardType,
+        Amount,
         USERID,
+        Type,
+        paymentTitle,
       });
 
-      const Transactions = await Transaction.findById(req.params.id);
+      const Payments = await Payment.findById(req.params.id);
 
       return res.status(200).json({
         code: 200,
         success: "Success",
         status: "OK",
-        data: Transactions,
-        message: "Transaction Details is Updated.",
+        data: Payments,
+        message: "Payment Details is Updated.",
       });
     }
   } catch (err) {

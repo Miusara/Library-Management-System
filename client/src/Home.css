@@ -1,5 +1,14 @@
 .pg {
-  background-image: url("/src/home2.png");
+    background-image: url("/src/home2.png");
+    height: 739px;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pg1 {
+    background-image: url("https://www1.chester.ac.uk/sites/default/files/english.jpg");
     height: 739px;
     width: 100%;
     background-position: right;
