@@ -18,6 +18,11 @@ import BookReport from './components/Books/BookReport';
 import AddEBooks from './components/Books/AddEbook';
 import DisplayEBooks from './components/Books/AllEBooks';
 
+import AddTransaction from './components/Transaction/AddTransaction';
+import TransactionHistory from './components/Transaction/TransactionHistory';
+import UpdateTransaction from './components/Transaction/UpdateTransaction';
+import TransactionReport from './components/Transaction/TransactionReport';
+
 
 
 function App() {
@@ -40,6 +45,12 @@ function App() {
                     <Route path='/BookReport' element={< BookReport/>} />
                     <Route path='/AddEBooks' element={< AddEBooks/>} />
                     <Route path='/DisplayEBooks' element={< DisplayEBooks/>} />
+
+                    <Route path='/AddTransaction' element={< AddTransaction/>} />
+                    <Route path='/TransactionHistory' element={< TransactionHistory/>} />
+                    <Route path='/UpdateTransaction' element={< UpdateTransaction/>} />
+                    <Route path='/TransactionReport' element={< TransactionReport/>} />
+
                     
 
                     <Route path = '/'element = { < LoginScreen /> } />

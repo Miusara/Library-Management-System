@@ -23,6 +23,7 @@ const LoginScreen = ()=>{
         try {
 
           if(email === config.admin1.email && password === config.admin1.password){
+            localStorage.setItem("UserID", config.admin1._id);
             history("/Home");  
            }
 
