@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./TransactionHistory.css";
+import "./PaymentHistory.css";
 import axios from "axios";
 import Navbar from "../Books/Navbar";
 import Footer from "../Books/Footer";
 
-class TransactionHistory extends Component {
+class PaymentHistory extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Transaction: [],
+      Payment: [],
       searchname: "",
     };
     this.onEdit = this.onEdit.bind(this);
@@ -17,35 +17,62 @@ class TransactionHistory extends Component {
     this.onChange = this.onChange.bind(this);
   }
 
-  onEdit(e, id, Username, BookID, Borrowdate, ReturnDate) {
-    window.localStorage.removeItem("Transactionid");
-    localStorage.setItem("Transactionid", id);
+  onEdit(
+    e,
+    id,
+    Type,
+    CardName,
+    CardNumber,
+    EXPDate,
+    CVV,
+    Username,
+    CardType,
+    Amount,
+    paymentTitle
+  ) {
+    window.localStorage.removeItem("paymentid");
+    localStorage.setItem("paymentid", id);
 
-    window.localStorage.removeItem("BookID");
-    localStorage.setItem("BookID", BookID);
+    window.localStorage.removeItem("Type");
+    localStorage.setItem("Type", Type);
 
-    window.localStorage.removeItem("Borrowdate");
-    localStorage.setItem("Borrowdate", Borrowdate);
+    window.localStorage.removeItem("CardName");
+    localStorage.setItem("CardName", CardName);
 
-    window.localStorage.removeItem("ReturnDate");
-    localStorage.setItem("ReturnDate", ReturnDate);
+    window.localStorage.removeItem("CardNumber");
+    localStorage.setItem("CardNumber", CardNumber);
+
+    window.localStorage.removeItem("EXPDate");
+    localStorage.setItem("EXPDate", EXPDate);
+
+    window.localStorage.removeItem("CVV");
+    localStorage.setItem("CVV", CVV);
 
     window.localStorage.removeItem("Username");
     localStorage.setItem("Username", Username);
 
-    window.location = "/UpdateTransaction";
+    window.localStorage.removeItem("CardType");
+    localStorage.setItem("CardType", CardType);
+
+    window.localStorage.removeItem("Amount");
+    localStorage.setItem("Amount", Amount);
+
+    window.localStorage.removeItem("paymentTitle");
+    localStorage.setItem("paymentTitle", paymentTitle);
+
+    window.location = "/Updatefee";
 
     // window.location.reload();
   }
 
   onDelete(e, id) {
     axios
-      .delete(`http://localhost:8089/Transaction/Transactiondelete/${id}`)
+      .delete(`http://localhost:8089/payments/paymentdelete/${id}`)
       .then((res) => {
         console.log("res", res);
         if (res.data.code === 200) {
           console.log("res.data.code", res.data.code);
-          alert("Transaction Deleted !");
+          alert("Payment Deleted !");
 
           window.location.reload();
         } else {
@@ -66,13 +93,11 @@ class TransactionHistory extends Component {
     console.log(name);
 
     axios
-      .get(
-        `http://localhost:8089/Transaction/getallTransactionsbysearch/${name}`
-      )
+      .get(`http://localhost:8089/payments/getallpaymentsbysearch/${name}`)
 
       .then((response) => {
-        this.setState({ Transaction: response.data.data });
-        console.log("Transaction search:  ", this.state.Transaction);
+        this.setState({ Payment: response.data.data });
+        console.log("Payment search:  ", this.state.Payment);
       });
   }
 
@@ -80,11 +105,11 @@ class TransactionHistory extends Component {
     const USERID = localStorage.getItem("UserID");
     console.log("USERID:  ", USERID);
     axios
-      .get(`http://localhost:8089/Transaction/getallTransactions/${USERID}`)
+      .get(`http://localhost:8089/payments/getallpayments/${USERID}`)
 
       .then((response) => {
-        this.setState({ Transaction: response.data.data });
-        console.log("Transaction Did Mount:  ", this.state.Transaction);
+        this.setState({ Payment: response.data.data });
+        console.log("Payment Did Mount:  ", this.state.Payment);
       });
   }
   render() {
@@ -98,7 +123,7 @@ class TransactionHistory extends Component {
         >
           <input
             type="text"
-            placeholder="Book Ref No.."
+            placeholder="Type Payment Title..."
             name="searchname"
             value={this.state.searchname}
             onChange={this.onChange}
@@ -112,12 +137,12 @@ class TransactionHistory extends Component {
         <br />
         <br />
         <div className="container">
-          <a href="/AddTransaction">
+          <a href="/PaymentHome">
             <button
               style={{ marginLeft: "0px", marginTop: "30px" }}
               class="btn btn-success"
             >
-              New Transaction
+              New Payment
             </button>
           </a>
 
@@ -127,21 +152,24 @@ class TransactionHistory extends Component {
                 <thead>
                   <tr>
                     <th scope="col">User Name</th>
-                    <th scope="col">BookID</th>
-                    <th scope="col">Borrow Date</th>
-                    <th scope="col">Return Date</th>
-
+                    <th scope="col">Titile</th>
+                    <th scope="col">Payment Type</th>
+                    <th scope="col">Card Type</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Amount</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.Transaction.length > 0 &&
-                    this.state.Transaction.map((item, index) => (
+                  {this.state.Payment.length > 0 &&
+                    this.state.Payment.map((item, index) => (
                       <tr>
                         <th scope="row">{item.Username}</th>
-                        <td>{item.BookID}</td>
-                        <td>{item.Borrowdate}</td>
-                        <td>{item.ReturnDate}</td>
+                        <td>{item.paymentTitle}</td>
+                        <td>{item.Type}</td>
+                        <td>{item.CardType}</td>
+                        <td>{item.createdAt}</td>
+                        <td>{item.Amount}</td>
 
                         <td>
                           <button
@@ -151,10 +179,15 @@ class TransactionHistory extends Component {
                               this.onEdit(
                                 e,
                                 item._id,
+                                item.Type,
+                                item.CardName,
+                                item.CardNumber,
+                                item.EXPDate,
+                                item.CVV,
                                 item.Username,
-                                item.BookID,
-                                item.Borrowdate,
-                                item.ReturnDate
+                                item.CardType,
+                                item.Amount,
+                                item.paymentTitle
                               )
                             }
                           >
@@ -177,10 +210,11 @@ class TransactionHistory extends Component {
           </div>
         </div>
         <br />
-        <a href="/TransactionReport">
+        <a href="/PaymentReport">
           <button
             type="button"
             className="w3-button w3-blue"
+            // style={{ marginLeft: "1200px", marginTop: "-120px" }}
           >
             Genarate Report
           </button>
@@ -209,4 +243,4 @@ class TransactionHistory extends Component {
   }
 }
 
-export default TransactionHistory;
+export default PaymentHistory;

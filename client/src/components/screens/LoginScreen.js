@@ -16,6 +16,7 @@ const LoginScreen = ()=>{
  
 
     const loginHandler = async (e)=>{
+      localStorage.clear();
         e.preventDefault();
 
   
