@@ -62,7 +62,7 @@ export default function  UpdateBooks() {
         console.log(newcopies)
     
             await axios
-                .put(`http://localhost:8088/books/edit/${ISBN}`, newcopies)
+                .put(`http://localhost:8089/books/edit/${ISBN}`, newcopies)
                     .then(() => {
                         alert("number of copies updated Successfully");
                         window.location.reload(true);
@@ -79,7 +79,7 @@ export default function  UpdateBooks() {
                          <div className='col-lg-8 col-md m-auto'>
                              <div className='container'>
                             
-                             <form className ="form-control" style={{background:" #ffffcc"}}>
+                             <form className ="form-control" style={{background:" #ffffcc",right:"260px",width:"1000px"}}>
                              <h1 className='text-center h1'>Update Book Details</h1> 
                                 <div className='modal-body'>
                                     <div class="row g-3">
@@ -101,7 +101,7 @@ export default function  UpdateBooks() {
                                                         />
                                                 </Col>
                                                 <Col md={1}>
-                                                     <button className="btn btn-primary " type="submit" onClick={loadBookDetails}>Search Book</button>
+                                                     <button className="btn " type="submit" style={{right:"650px",top:"17px",width:"130px",background:"#cc9900",color:"#ffff"}}onClick={loadBookDetails}>Search Book</button>
                                                 </Col>
                                             </Row>
                                         </div>   
@@ -139,7 +139,7 @@ export default function  UpdateBooks() {
                                                                             />
                                                                         </Col>
                                                                         <Col md={1}>
-                                                                            <button class="btn btn-outline-success btn-sm" onClick={activate}>Edit</button>
+                                                                            <button class="btn btn-outline-success btn-sm"style={{right:"20px",top:"80px",width:"50px"}} onClick={activate}>Edit</button>
                                                                         </Col>
                                                                     </Row>
                                                                     </div>
@@ -222,9 +222,9 @@ export default function  UpdateBooks() {
                                                                     />
                                                                 </div>
                                                         </div>
-                                        <br/>
-                                                <button className="btn btn-primary me-md-2" type="submit" onClick={onSubmit}>Update</button>
-                                
+                                        <br/><br></br>
+                                                <button className="btn " type="submit" style={{right:"400px",top:"320px",width:"130px",background:"#cc9900",color:"#ffff"}}onClick={onSubmit}>Update</button>
+                                <br></br>
                                         
                                          </div>
                                     </form>&nbsp;&nbsp; 
@@ -232,9 +232,9 @@ export default function  UpdateBooks() {
                             </div>
                             </div>
                             </div>&nbsp;&nbsp; 
-                            <div className='footer3'>
-                                <Footer/>
-                            </div>
+                            <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
             </>
         );
 }

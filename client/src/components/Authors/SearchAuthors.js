@@ -48,7 +48,7 @@ export default function SearchAuthors() {
                         <div className="card container" style={{background:" #ffffcc"}}>&nbsp;&nbsp;&nbsp; 
                        
                             <h1 className="text-black h1"> Author Details </h1>
-                               
+                               <br></br>
                              <div className='col-sm-3'>
                                         <Row>
                                             <Col md={9}>
@@ -65,9 +65,9 @@ export default function SearchAuthors() {
                                                 }}  
                                             />
                                             </Col>
-                                            <Col md={1}>
-                                                <button className="btn btn-primary " type="submit" onClick={getAuthors}>Search Author</button>
-                                            </Col>
+                                          
+                                                <button className="btn " type="submit" style={{right:"660px",top:"90px",width:"150px",background:"#cc9900",color:"#ffff"}}onClick={getAuthors}>Search Author</button>
+                                          
                                         </Row>
                                     </div>&nbsp;&nbsp;&nbsp;  
                              
@@ -105,9 +105,9 @@ export default function SearchAuthors() {
                  </div>
             </div>
         </div>
-        <div className='footer6'>
-    <Footer/>
-    </div>
+        <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
     </>
     )
 }

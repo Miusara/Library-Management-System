@@ -70,7 +70,7 @@ const AddEBooks = () => {
       <div className='container-height'>
          <div className='col-lg-8 col-md m-auto'>
             <div className='container'>
-                <form className ="form-control" style={{background:" #ffffcc"}} onSubmit={handleSubmit} encType='multipart/form-data' >
+                <form className ="form-control" style={{background:" #ffffcc",right:"260px",width:"1000px"}} onSubmit={handleSubmit} encType='multipart/form-data' >
                     <div className='modal-body'>
                          <h1 className='text-center'>Add E-Books</h1>
                          <br/>
@@ -201,27 +201,29 @@ const AddEBooks = () => {
                      {/*decision*/}
                      <button 
                         type="submit"
-                        className="btn btn-primary "
+                        className="btn"style={{width:"200px" , top:"300px", right:"350px",background:"#cc9900",color:"#ffff"}}
                         disabled={loading}
                        
                         >{loading ? 'Uploading...' : 'ADD E-BOOK'}
                      </button>
                      <ToastContainer style = {{marginTop:"50px"}}/> 
                      <br/>
-                     <Link to={"/DisplayEBooks"}><button type="submit" class="btn btn-primary">Display E-BOOKS</button></Link>
+                     <Link to={"/DisplayEBooks"}><button type="submit" class="btn"style={{width:"200px" , top:"350px", right:"350px",background:"#cc9900",color:"#ffff"}}>Display E-BOOKS</button></Link>
             </div>
             <br/>
-            </div>            
+            </div>   <br></br><br></br><br></br>
+     
     </form>
-   
+ 
     
     </div>&nbsp;&nbsp;&nbsp;
+   
   </div>
   </div>
-  
-    <div className='footer8'>
-    <Footer/>
-    </div>
+
+  <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
 </>
     );
   }

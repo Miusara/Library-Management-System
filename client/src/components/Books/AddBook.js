@@ -42,7 +42,7 @@
       <div className='container-height'>
          <div className='col-lg-8 col-md m-auto'>
             <div className='container'>
-                <form className ="form-control" style={{background:" #ffffcc"}} onSubmit={formSubmitHandler}>
+                <form className ="form-control" style={{background:" #ffffcc",right:"260px",width:"1000px"}} onSubmit={formSubmitHandler}>
                     <div className='modal-body'>
                          <h1 className='text-center'>Add Book</h1>
                          <br/>
@@ -149,9 +149,9 @@
                                       required="required" 
                                     />
                                 </div> 
-                        </div>
+                        </div><br></br><br></br>
                         <br/>
-                        <button type='submit' className='btn btn-primary m-auto'>
+                        <button type='submit' className='btn'style={{width:"150px" , top:"350px", right:"410px",background:"#cc9900",color:"#ffff"}}>
                           ADD BOOK
                         </button>
                     </div>
@@ -160,10 +160,10 @@
     </div>&nbsp;&nbsp;&nbsp;
   </div>
   </div>
-  
-    <div className='footer2'>
-      <Footer/>
-    </div>
+<div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
+    
 </>
 )       
 } 

@@ -6,8 +6,6 @@ html {
 
 .bg0 {
     background-image: url('/src/home.png');
-    /* Full height */
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,7 +26,7 @@ html {
 
 .form-control,
 .btn {
-    min-height: 38px;
+    min-height: 8px;
     border-radius: 2px;
 }
 
@@ -54,7 +52,7 @@ body {
 }
 
 .form-control,
-.btn {
+.btn1 {
     border-radius: 3px;
 }
 
@@ -69,11 +67,17 @@ body {
 .background form {
     color: rgb(14, 12, 12);
     border-radius: 3px;
-    margin-top: 90px;
+    margin-top: -190px;
     margin-bottom: 15px;
     background: rgba(240, 242, 233, 0.601);
     padding: 30px;
+    right:600px;
+    width: 420px;
+    border: 2px;
+    border-color: #722727;
 }
+
+
 
 .background h2 {
     color: #333;

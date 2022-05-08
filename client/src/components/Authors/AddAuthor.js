@@ -44,7 +44,7 @@ export default function AddAuthors(){
     <div className='container-height'>
        <div className='col-lg-8 col-md m-auto'>
           <div className='container'>
-              <form className ="form-control" style={{background:" #ffffcc"}} onSubmit={formSubmitHandler}>
+              <form className ="form-control"  style={{background:" #ffffcc",right:"260px",width:"1000px"}} onSubmit={formSubmitHandler}>
                   <div className='modal-body'>
                        <h1 className='text-center'>Add Author Details</h1>
                        <br/>
@@ -196,8 +196,9 @@ export default function AddAuthors(){
                               </div> 
                    
                       </div>
+                      <br></br><br></br>
                       <br/>
-                      <button type='submit' className='btn btn-primary m-auto'>
+                      <button type='submit' className='btn'style={{width:"200px" , top:"350px", right:"410px",background:"#cc9900",color:"#ffff"}}>
                         Insert the Information
                       </button>
                   </div>
@@ -207,7 +208,7 @@ export default function AddAuthors(){
 </div>
 </div>
 
-  <div className='footer2'>
+<div style={{marginLeft:"119px"}}>
   <Footer/>
   </div>
 </>

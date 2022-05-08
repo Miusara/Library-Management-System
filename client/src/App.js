@@ -1,7 +1,24 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import LoginScreen from "./components/screens/LoginScreen";
 import Home from "../src/components/Home";
+
+
+import AddUser from './components/Member/AddUser';
+import Header from './components/Member/Header';
+import UserLogin from "./components/screens/UserLogin";
+import UpdateUser from './components/Member/UpdateUser';
+import AdminHome from './components/Member/AdminHome';
+import MemberHome from './components/Member/MemberHome';
+import ViewUser from './components/Member/ViewUser';
+import Icon from './components/Member/Icon';
+import Recommend from './components/Member/Recommend';
+import ViewRecommend from './components/Member/ViewRecommend';
+import SearchBook from './components/Member/SearchBook';
+import BReport from './components/Member/BookReport';
+import AllUser from './components/Member/AllUser';
+
 
 import AddBooks from './components/Books/AddBook';
 import AllBooks from './components/Books/AllBooks';
@@ -18,6 +35,10 @@ import BookReport from './components/Books/BookReport';
 import AddEBooks from './components/Books/AddEbook';
 import DisplayEBooks from './components/Books/AllEBooks';
 
+
+
+
+
 import AddTransaction from './components/Transaction/AddTransaction';
 import TransactionHistory from './components/Transaction/TransactionHistory';
 import UpdateTransaction from './components/Transaction/UpdateTransaction';
@@ -32,13 +53,15 @@ import PaymentReport from './components/Payment/PaymentReport';
 
 
 
+
 function App() {
     return ( 
         <div className = 'App'>
             <Router>
                 <Routes>
-
-                    <Route path = '/' element = { < LoginScreen /> } />
+                   
+                <Route path="/"element = { < AdminHome/> } />  
+                    <Route path = "/LoginScreen" element = { < LoginScreen /> } />
                     <Route path="/home" element = { < Home /> } />
                     <Route path='/AddBooks' element={< AddBooks />} />
                     <Route path='/SearchBooks' element={< SearchBooks />} />
@@ -52,7 +75,28 @@ function App() {
                     <Route path='/BookReport' element={< BookReport/>} />
                     <Route path='/AddEBooks' element={< AddEBooks/>} />
                     <Route path='/DisplayEBooks' element={< DisplayEBooks/>} />
+                    
 
+                    
+
+                    <Route path="/add"element = { < AddUser/> } />
+                    <Route path="/header"element = { < Header/> } />
+                    <Route path = "/User" element = { < UserLogin/> } />
+                    <Route path="/update"element = { < UpdateUser/> } />
+                    <Route path="/admin"element = { < AdminHome/> } />
+                    <Route path="/member"element = { < MemberHome/> } />
+                    <Route path="/user"element = { < ViewUser/> } />
+                    <Route path="/icon"element = { < Icon/> } />
+                    <Route path="/recommend"element = { < Recommend/> } />
+                    <Route path="/delete"element = { < ViewRecommend/> } />
+                    <Route path="/get"element = { < SearchBook/> } />
+                    <Route path="/Borrowed"element = { < BReport/> } />
+                    <Route path="/alluser"element = { < AllUser/> } />
+                 
+
+
+
+                    
                     <Route path='/AddTransaction' element={< AddTransaction/>} />
                     <Route path='/TransactionHistory' element={< TransactionHistory/>} />
                     <Route path='/UpdateTransaction' element={< UpdateTransaction/>} />
@@ -65,11 +109,8 @@ function App() {
                     <Route path='/PaymentHistory' element={< PaymentHistory/>} />
                     <Route path='/Updatefee' element={< Updatefee/>} />
                     <Route path='/PaymentReport' element={< PaymentReport/>} />
-
                     
 
-                    <Route path = '/'element = { < LoginScreen /> } />
-                    <Route path="/home"element = { < Home /> } />
 
 
                 </Routes>  
@@ -79,3 +120,11 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+body {
+    background-color: white;
+  
+  }
+
+  h2{
+    top: -10%;
+    
+  }
+   
+  button{
+   
+    color: white;
+    font-size: 25px;
+    right: 800px;
+    cursor: pointer;
+    top: 120%;
+    width: 10%;
+    position: absolute;
+  }
+
+  .box { 
+    height: 605px;
+    position: absolute;
+    border: 3px solid rgb(4, 4, 4);
+    background-color: #ffffcc;
+    top: 40%;
+    width: 60%;
+    right: 405px;
+     
+  }
+
+ 

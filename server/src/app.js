@@ -16,6 +16,20 @@ app.use(express.json({ limit: "20mb" }));
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//User Management
+const userRouter = require ("../src/api/routes/memberRoutes/user");
+app.use ("/user",userRouter);
+
+const recommendRouter = require ("../src/api/routes/memberRoutes/recommend");
+app.use ("/recommend",recommendRouter);
+
+const borrowedRouter = require ("../src/api/routes/memberRoutes/borrowed");
+app.use ("/borrowed",borrowedRouter);
+
+
+
+
+
 
 //Book Managements
 //variable declaration and import model file
@@ -27,10 +41,6 @@ app.use("/books", bookRouter);
 const authorRouter = require("./api/routes/bookRoutes/authorRoutes.js");
 app.use("/authors", authorRouter);
 
-//Recomended book Managements
-//variable declaration and import model file
-const recommendRouter = require("./api/routes/memberRoutes/recommend.js");
-app.use("/recommend", recommendRouter);
 
 //Recomended Ebook Managements
 //variable declaration and import model file

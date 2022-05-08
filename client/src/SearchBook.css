@@ -1,0 +1,112 @@
+
+.sbar{
+    color: white;
+    font-size: 15px;
+    top: 12%;
+    width: 300px;
+    right: 15%;;
+    position: absolute;
+    border:2px;
+    border-color: #000000;
+}
+
+.stable{
+    color: white;
+    font-size: 15px;
+    top: 19%;
+    width: 700px;
+    right: 10%;
+    position: absolute;
+}
+
+h3{
+  top:2%;
+  right: 35%;
+  position: absolute;
+}
+
+
+.boxs{
+  height: 715px;
+  position: absolute;
+  background-color: #ffffcc;
+  border: 3px solid rgb(4, 4, 4);
+  top: 35%;
+  width: 60%;
+  right: 310px;
+}
+
+
+
+@import 
+url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+footer {
+  height:90px;
+  padding: 3px;
+  border: 2px solid #000000;
+  background-color: #f3f3f3;
+  color: black;
+  top:570px;
+  width :99%;
+  margin-left: -113px;
+  position: absolute;
+
+}
+
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 50px;
+
+  text-decoration: none;
+  margin: 5px 2px;
+
+   
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background:  #000000;
+  color: white;
+}
+
+.fa-twitter {
+  background:  #000000;
+  color: white;
+}
+
+.fa-instagram {
+  background:  #000000;
+  color: white;
+}
+
+
+.fa-youtube {
+  background:  #000000;
+  color: white;
+}
+
+
+
+.sbuttons{
+    position: absolute;
+    top: 15%;
+    right: 1%;
+    text-align: right;
+    
+}
+.p {
+ 
+    position: absolute;
+    top: 30%;
+    width: 90%;
+    right: 7%;
+    text-align: left;
+   
+  
+  }

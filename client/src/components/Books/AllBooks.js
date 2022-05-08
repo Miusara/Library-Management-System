@@ -63,9 +63,9 @@ export default function AllBooks(){
                                 </table>
                             </div>&nbsp;&nbsp;&nbsp;  
                     </div>
-              <div className="footer1">
-                <Footer/>
-            </div>
+                    <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
         </>
         
         

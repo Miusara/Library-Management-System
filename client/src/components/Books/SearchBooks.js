@@ -46,6 +46,7 @@ export default function SearchBooks() {
                         <div className="card container" style={{background:" #ffffcc"}}>&nbsp;&nbsp;&nbsp; 
                        
                             <h1 className="text-black h1"> Search Book Details </h1>
+                            <br></br>
                                
                              <div className='col-sm-3'>
                                         <Row>
@@ -64,7 +65,7 @@ export default function SearchBooks() {
                                             />
                                             </Col>
                                             <Col md={1}>
-                                                <button className="btn btn-primary " type="submit" onClick={getBooks}>Search Book</button>
+                                                <button className="btn" type="submit"  style={{right:"690px",top:"90px",width:"120px",background:"#cc9900",color:"#ffff"}}onClick={getBooks}>Search Book</button>
                                             </Col>
                                         </Row>
                                     </div>&nbsp;&nbsp;&nbsp;  
@@ -101,9 +102,9 @@ export default function SearchBooks() {
                  </div>
             </div>
         </div>
-        <div className='footer6'>
-    <Footer/>
-    </div>
+        <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
         
     </>
     )

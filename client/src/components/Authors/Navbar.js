@@ -1,34 +1,38 @@
 import React from  "react";
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 import Logo from '../../Logo.png';
 import '../../Home.css';
+import '../../Navbar.css';
 
 
 export default function Navbar() {
-    return(
-     <>
-     <div className="row">
-        <div className="col">
-            <div className="image2" >
-                <img src={Logo} alt="Logo" width="150px" />
-            </div>
+  return(
+    <div class ="container">
+          < div class="logoh">
+          <img src={Logo}  alt="logo" width="200px"/>
+          </div>
+ 
+
+
+
+    <div class="button2"style={{width:"1000px"}}>
+            <Link to={"/"}><button type='submit' style={{background:"#cc9900",color:"#ffff"}}className='btn'>LOG OUT</button></Link>
         </div>
-        <div className="col button2">
-            <Link to={"/"}><button type='submit' className='btn btn-primary m-auto'>LOG OUT</button></Link>
-        </div>
-    </div>
-    <nav className="navbar navbar-expand navbar-light bg-light">
-      <div className="container-fluid">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/home">Home</a>
+<br></br><br></br> <br></br><br></br> <br></br><br></br>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light"style={{right:"95px",width:"1500px"}}>
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+      <li className="nav-item">
+              <a className="nav-link" aria-current="page" href="/home">Home</a>
               
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <a className="nav-link dropdown-toggle" href="/AddBooks" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Manage Books</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a className="dropdown-item" href="/AddBooks">Add new books</a></li>
@@ -38,7 +42,7 @@ export default function Navbar() {
                 <li><a className="dropdown-item" href="/AllBooks">All books</a></li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <a className="nav-link dropdown-toggle" href="/AddAuthors" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Manage Authors
               </a>
@@ -51,7 +55,7 @@ export default function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="/AddEBooks">E-Books</a>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
               <a className="nav-link dropdown-toggle" href="/BookReport" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Reports
               </a>
@@ -60,10 +64,11 @@ export default function Navbar() {
                 <li><a className="dropdown-item" href="/AuthorReport">Authors Report</a></li>
               </ul>
             </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-     </>
+      </ul>
+    </div>
+  </div>
+</nav></div>
+        
+        
     )
-}
+    }

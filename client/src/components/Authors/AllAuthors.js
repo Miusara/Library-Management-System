@@ -63,9 +63,9 @@ export default function AllAuthors(){
                                 </table>
                             </div>&nbsp;&nbsp;&nbsp;  
                     </div>
-              <div className="footer4">
-                <Footer/>
-            </div>
+                    <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
         </>
         
         

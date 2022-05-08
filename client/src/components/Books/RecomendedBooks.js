@@ -13,7 +13,7 @@ export default function RecomendedBooks() {
 
     useEffect(() =>{
         function getRBooks(){
-            axios.get("http://localhost:8089/recommend/view")
+            axios.get("http://localhost:8089/recommend")
             .then((res) =>{
 
             //console.log(res.data);
@@ -40,7 +40,7 @@ export default function RecomendedBooks() {
     }
 
     const deleteRecomended=(bookName) =>{
-        axios.delete(`http://localhost:8088/recommend/delete/${bookName}`).then(()=>{
+        axios.delete(`http://localhost:8089/recommend/delete/${bookName}`).then(()=>{
           alert("Reject Recommendation Successfully");
         window.location.reload(false);
         }).catch((e) => {
@@ -86,7 +86,7 @@ export default function RecomendedBooks() {
                                                 <td className="text-center" >{value.pYear}</td> 
                                                 <td className="text-center" >{value.edition}</td> 
                                                 <td className="text-center" >{value.requestDate}</td>
-                                                <td> <IconButton aria-label="delete" onClick={() => deleteRecomended(value.bookName)}>
+                                                <td> <IconButton aria-label="delete" style={{left:"10px"}}onClick={() => deleteRecomended(value.bookName)}>
                                                       <DeleteIcon fontSize="small" />
                                                     </IconButton>
                                                 </td> 
@@ -97,9 +97,9 @@ export default function RecomendedBooks() {
                             </table>
                         </div><br />
             </div>
-        <div className='footer5'>
-    <Footer/>
-    </div>
+            <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
         </>
     )
 }

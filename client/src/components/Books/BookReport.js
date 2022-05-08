@@ -3,6 +3,7 @@ import axios from "axios";
 import jspdf from "jspdf";
 import "jspdf-autotable"
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function BookReport() {
 
@@ -110,30 +111,19 @@ export default function BookReport() {
                                                             }
                                                     </tbody>
                                                 </table>
-                                            </div><br />
+                                            </div><br /><br></br>
                                         <center>
-                                            <button type="print" className="btn btn-primary" onClick={() => generatePDF(filteredData)}>Generate Report</button>
+                                            <button type="print" className="btn" style={{width:"200px" , top:"680px", right:"680px",background:"#cc9900",color:"#ffff"}}onClick={() => generatePDF(filteredData)}>Generate Report</button>
                                         </center>&nbsp;&nbsp;&nbsp; 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>&nbsp;&nbsp;&nbsp; 
-                                
-                    <div className='footer7'>
-                        <footer>
-                            <div className ="p4">
-                                <b>Copyright 2022 @ LMS. All Rights Reserved.. </b></div>
-                                    <div className="sbuttons4">
-                                        <div align="right" class="socialbtns">
-                                            <a href="#" class="fa fa-lg fa-facebook"></a>
-                                            <a href="#" class="fa fa-lg fa-twitter"></a>
-                                            <a href="#" class="fa fa-lg fa-instagram"></a>
-                                            <a href="#" class="fa fa-lg fa-youtube"></a>
-                                        </div>
-                            </div>
-                        </footer>
-                    </div>
+                <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>             
+                    
         </>
     )
 }

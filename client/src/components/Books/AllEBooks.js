@@ -58,7 +58,7 @@ export default class DisplayEBooks extends React.Component {
   }
 
 deleteEbook(PublishDate) {
-    axios.delete(`http://localhost:8088/ebooks/delete/${PublishDate}`)
+    axios.delete(`http://localhost:8089/ebooks/delete/${PublishDate}`)
         .then((res) => {
             toast("Success! E-Book Deleted");
             window.location="/DisplayEBooks";
@@ -71,9 +71,9 @@ deleteEbook(PublishDate) {
   render() {
     return (
       <>
-        <Navbar/>
+        <Navbar/><br/>
                 {/* Display data from API */}
-                <h1>View E-Books</h1>
+                <h2 style={{ color: "black" }}>View E-Books</h2>
                 <div style={{marginLeft: "200px" }}>
                     {this.state.filteredData.length === 0 ? (<div className="alert alert-danger" style={{ marginLeft: "300px", width: "20%"}}>
                         <center>Data is not found<br /><br /></center> <br />
@@ -92,9 +92,10 @@ deleteEbook(PublishDate) {
                                                 <p style={{ color: "black" }}><b>Published Year: </b>{i.PublicationYear}</p>
                                                 <p style={{ color: "black" }}><b>Category: </b>{i.Category}</p>
                                                 <p style={{ color: "blue" }}><b style={{ color: "black" }}>Upload: </b>{i.PublishDate}</p>
+                                              
                                         </div>
 
-                                        <button className="btn btn-danger" onClick={() => this.deleteEbook(i.PublishDate)}>Delete</button>
+                                        <button1 className="btn"style={{background:"#cc0000",color:"#ffff"}} onClick={() => this.deleteEbook(i.PublishDate)}>Delete</button1>
                                    
                                 </div>
                             </p>
@@ -103,9 +104,9 @@ deleteEbook(PublishDate) {
                     ))}
                 </div>
             <br/>
-            <div className='footer4'>
-                <Footer/>
-            </div>
+            <div style={{marginLeft:"119px"}}>
+  <Footer/>
+  </div>
         </>
     );
   }

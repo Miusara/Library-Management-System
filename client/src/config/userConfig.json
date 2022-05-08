@@ -1,0 +1,14 @@
+{
+    "admin1": {
+        "email": "imanthi@gmail.com",
+        "password": "Ima@123",
+        "_id":"6240652cd87e1de73b804c07"
+    },
+
+    "admin2": {
+        "email": "deshani@gmail.com",
+        "password": "deshani@123"
+    }
+
+
+}

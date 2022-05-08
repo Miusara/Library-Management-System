@@ -1,0 +1,61 @@
+.add{
+    height:-1000px;
+    top: 230px;
+}
+
+.boxh {
+    width: 80%;
+    height: 200pt;
+    position: relative;
+    left: 20%;
+    top: 100px;
+    margin-left: -150px;
+    padding-top: 120px;
+}
+
+.button {
+    background-color: #dbdae0ea;
+    border: 2px solid rgb(11, 9, 9);
+    color: rgb(15, 11, 11);
+    padding: 20px;
+    padding-left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 320px;
+    height: 120px;
+    margin: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 20px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+body {
+    background-color: #bfbfbf;
+  }
+  

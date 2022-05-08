@@ -1,0 +1,89 @@
+.vr{ 
+ height: 605px;
+  top:41px;
+  right:25px;  
+  }
+
+  .deleter{
+    height: 235px;
+    top:1px;
+    right:25px;  
+    background-color: #ffffcc;
+    border: 3px solid rgb(4, 4, 4);
+  }
+
+
+  
+  @import 
+url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+
+footer {
+  height:90px;
+  padding: 3px;
+  border: 2px solid #000000;
+  background-color: #f3f3f3;
+  color: black;
+  top:-555555px;
+  width :9px;
+  margin-right: 19px;
+  position: absolute;
+  
+}
+
+.fa {
+  padding: 15px;
+  font-size: 20px;
+  width: 50px;
+
+  text-decoration: none;
+  margin: 5px 2px;
+
+   
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background:  #000000;
+  color: white;
+}
+
+.fa-twitter {
+  background:  #000000;
+  color: white;
+}
+
+.fa-instagram {
+  background:  #000000;
+  color: white;
+}
+
+
+.fa-youtube {
+  background:  #000000;
+  color: white;
+}
+
+
+
+.sbuttons{
+    position: absolute;
+    top: 98%;
+   
+    right: 7%;
+    text-align: right;
+    
+}
+.p {
+ 
+    position: absolute;
+    top: 100%;
+    width: 90%;
+    right: 3%;
+    text-align: left;
+   
+  
+  }

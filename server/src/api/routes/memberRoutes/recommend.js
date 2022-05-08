@@ -12,6 +12,8 @@ router.route ("/add").post((req,res) => {
     const pYear= req.body.pYear; 
     const edition= req.body.edition;
     const requestDate= req.body.requestDate;
+
+   
    
 
 
@@ -24,6 +26,7 @@ router.route ("/add").post((req,res) => {
         pYear,
         edition,
         requestDate
+       
       
 
     })
@@ -39,7 +42,7 @@ router.route ("/add").post((req,res) => {
 
 
 //get
-router.route("/view").get((req,res)=>{
+router.route("/").get((req,res)=>{
 
     Recommend.find().then((recommend)=>{
         res.json(recommend)

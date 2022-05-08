@@ -66,7 +66,7 @@ export default function  UpdateAuthors() {
         console.log(newcopies)
     
             await axios
-                .put(`http://localhost:8088/authors/update/${_id}`, newcopies)
+                .put(`http://localhost:8089/authors/update/${_id}`, newcopies)
                     .then(() => {
                         alert("number of copies updated Successfully");
                         window.location.reload(true);

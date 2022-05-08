@@ -16,7 +16,6 @@ const LoginScreen = ()=>{
  
 
     const loginHandler = async (e)=>{
-      localStorage.clear();
         e.preventDefault();
 
   
@@ -24,7 +23,6 @@ const LoginScreen = ()=>{
         try {
 
           if(email === config.admin1.email && password === config.admin1.password){
-            localStorage.setItem("UserID", config.admin1._id);
             history("/Home");  
            }
 
@@ -53,7 +51,7 @@ const LoginScreen = ()=>{
 
     return(
         <div className=" bg0">
-           <div className="background" style={{opacity:"0.8" , marginLeft:"550px" }} >
+           <div className="background" style={{opacity:"0.7" , marginLeft:"550px" }} >
            <form onSubmit={loginHandler} >
               <div className=" image2"> 
                 <center>
@@ -73,12 +71,12 @@ const LoginScreen = ()=>{
                     <br/>
                     <label className="float-left form-check-label"><input type="checkbox" onClick={showPassword} /> Show Password</label>
                 </div><br/>
-                <div className="form-group">
+                <div className="group">
 
-                <button type="submit" className="btn btn-primary btn-block"><i aria-hidden="true" onsubmit="/Home"></i> Log in</button>
+                <button type="submit" className="btn btn-primary btn-block" style={{width:"100px",left:"160px" ,top:"379px"}}><i aria-hidden="true" onsubmit="/Home"></i> Log in</button>
                 </div><br/>
                 <div className="clearfix">
-                   <Link to="/forgotpassword" className="float-right" style={{textDecoration:"none", float:"left"}}><b> Forgot Password 🥺?</b></Link><br/><br/>
+                   <Link to="/forgotpassword" className="float-right" style={{textDecoration:"none", left:"30px"}}><b> Forgot Password 🥺?</b></Link><br/><br/>
                    
                 </div>        
             </form>
