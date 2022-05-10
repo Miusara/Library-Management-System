@@ -82,7 +82,7 @@ export default function ViewRecommend() {
                            <td >{recommend.pYear} </td>
                            <td >{recommend.edition} </td>
                            <td >{recommend.requestDate} </td>
-                           <td>< a href ="/delete" button className="btn"style={{background:"#cc0000",color:"#ffff"}} onClick={() =>  deleteRecommend(recommend.bookName)}><b>DELETE</b></a>
+                           <td>< a href ="/delete" button className="btn btn-danger" onClick={() =>  deleteRecommend(recommend.bookName)}><b>DELETE</b></a>
                                         </td>
                
                         </tr>

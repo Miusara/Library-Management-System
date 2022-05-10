@@ -85,7 +85,7 @@ function App() {
                     <Route path="/update"element = { < UpdateUser/> } />
                     <Route path="/admin"element = { < AdminHome/> } />
                     <Route path="/member"element = { < MemberHome/> } />
-                    <Route path="/user"element = { < ViewUser/> } />
+                    <Route path="/user1"element = { < ViewUser/> } />
                     <Route path="/icon"element = { < Icon/> } />
                     <Route path="/recommend"element = { < Recommend/> } />
                     <Route path="/delete"element = { < ViewRecommend/> } />

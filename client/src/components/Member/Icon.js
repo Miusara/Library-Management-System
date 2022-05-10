@@ -14,7 +14,7 @@ function Icon() {
   <i class="fas fa-user">
  </i>
   <div class="dropdown-content">
-  <a href="/user">View Details</a>
+  <a href="/user1">View Details</a>
   <a href="/update">Update Details</a>
   </div>
 </div>

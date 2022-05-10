@@ -28,7 +28,7 @@ export default function AllUser(){
             <br></br><br></br>   
               
                     <div className="card container" style={{background:" #ffffcc"}}>&nbsp;&nbsp;&nbsp;  
-                        <center><h5 class="text-black">USER DETAILS</h5></center>&nbsp;&nbsp;&nbsp;  
+                        <center><h2 align="center">All Users</h2></center>&nbsp;&nbsp;&nbsp;  
                             <div className="card container d-flex justify-content-center" style={{background:"#fff"}}>
                                 <table className="table table-sm ">
                                     <thead>
