@@ -10,16 +10,16 @@ function Icon() {
 
 
 
-<div class="dropdown">
+ <div class="dropdown">
   <i class="fas fa-user">
- </i>
+  </i>
   <div class="dropdown-content">
   <a href="/user1">View Details</a>
   <a href="/update">Update Details</a>
   </div>
-</div>
+ </div>
 
-</div>
+ </div>
 
 
     )}

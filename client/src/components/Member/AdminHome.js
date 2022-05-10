@@ -26,7 +26,7 @@ function AdminHome() {
     <img src={user}  alt="user" width="80px" height="80px" left="15px"/>
    </a> </div>
 
-<div class ="uf">
+    <div class ="uf">
     <h4 class=" text-black"><b>Sign in as User</b></h4> 
     </div>
 

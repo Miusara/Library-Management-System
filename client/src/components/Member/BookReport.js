@@ -61,7 +61,7 @@ export default function BookReport() {
        <thead>
        
 
-<tr>
+ <tr>
  <th scope="col">Reg No</th>
  <th scope="col">Book Name</th>
  <th scope="col">Issue Date</th>

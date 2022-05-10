@@ -6,8 +6,8 @@ function Header(){
 
     return(
 <div class ="container">
-      < div class="logoh">
-      <img src={Logo}  alt="logo" width="200px"/>
+      < div class="logoh"><a href="/home">
+      <img src={Logo}  alt="logo" width="200px"/></a>
       </div>
       
       <div class ="ul1"style={{height:"60px"}}>

@@ -169,7 +169,7 @@ export default function AddUser(){
                 setNIC(e.target.value);
             }}/>
            </div></div>
-<br></br>
+           <br></br>
            <div class="row g-3">
           
             <lable className="col-sm-2 col-form-label text-black" >Shift</lable> 
