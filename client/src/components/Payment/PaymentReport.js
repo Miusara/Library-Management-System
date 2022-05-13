@@ -44,7 +44,7 @@ export default class paymentReport extends Component {
       <div>
         <Navbar />
 
-        <button
+        <input
           onClick={this.printDocument}
           style={{
             marginTop: "100px",
@@ -53,9 +53,10 @@ export default class paymentReport extends Component {
             marginLeft: "20px",
           }}
           className="btn btn-success btn-sm"
-        >
-          Generate PDF
-        </button>
+          value="   Generate PDF"
+        />
+       
+      
 <br/>
 <br/>
 <br/>

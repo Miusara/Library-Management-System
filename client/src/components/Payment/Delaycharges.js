@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Navbar from "../Books/Navbar";
+import Navbar from "../Payment/Navbar";
 import Footer from "../Books/Footer";
 
 export default function AddDelaycharges() {
-
-  
-const USERID = localStorage.getItem("UserID");
-
+  const USERID = localStorage.getItem("UserID");
 
   const [CardName, setCardName] = useState("");
   const [CardNumber, setCardNumber] = useState("");
@@ -17,7 +14,6 @@ const USERID = localStorage.getItem("UserID");
   const [CardType, setCardType] = useState("");
   const [Amount, setAmount] = useState("");
   const [paymentTitle, setpaymentTitle] = useState("");
-
 
   function formSubmitHandler(e) {
     e.preventDefault();
@@ -31,20 +27,20 @@ const USERID = localStorage.getItem("UserID");
       CardType,
       Amount,
       USERID,
-      Type:"Delay",
-      paymentTitle
+      Type: "Delay",
+      paymentTitle,
     };
 
-    console.log("newAssignment", newAssignment)
+    console.log("newAssignment", newAssignment);
     axios
-    .post("http://localhost:8089/payments/add", newAssignment)
-    .then(() => {
-      alert("Payment Added Succesfully !!");
-      window.location = "/PaymentHome";
-    })
-    .catch((err) => {
-      alert(err);
-    });
+      .post("http://localhost:8089/payments/add", newAssignment)
+      .then(() => {
+        alert("Payment Added Succesfully !!");
+        window.location = "/PaymentHome";
+      })
+      .catch((err) => {
+        alert(err);
+      });
   }
   return (
     <>
@@ -55,7 +51,7 @@ const USERID = localStorage.getItem("UserID");
           <div className="container">
             <form
               className="form-control"
-              style={{ background: " #CCDEFF" }}
+              style={{ background: " #CCDEFF",right:"260px",width:"1000px" }}
               onSubmit={formSubmitHandler}
             >
               <div className="modal-body">
@@ -155,7 +151,7 @@ const USERID = localStorage.getItem("UserID");
                   </label>
                   <div className="col-sm-3">
                     <input
-                      value = {Amount}
+                      value={Amount}
                       onChange={(e) => setAmount(e.target.value)}
                       type="text"
                       className="form-control"
@@ -164,7 +160,6 @@ const USERID = localStorage.getItem("UserID");
                       placeholder="Rs 00.00"
                     />
                   </div>
-                  
                 </div>
                 <br />
                 <div className="row g-3">
@@ -209,7 +204,11 @@ const USERID = localStorage.getItem("UserID");
                   </div>
                 </div>
                 <br />
-                <button type="submit" className="btn btn-outline-success waves-effect waves-light float-right">
+                <button
+                  type="submit"
+                  className="btn btn-outline-success waves-effect waves-light float-right"
+                  style={{width:"200px" , top:"450px", right:"350px",background:"#cc9900",color:"#ffff"}}
+                >
                   ADD Payment
                 </button>
               </div>
@@ -219,7 +218,7 @@ const USERID = localStorage.getItem("UserID");
         </div>
       </div>
 
-      <div className="footer2">
+      {/* <div className="footer2">
         <footer>
           <div className="p" style={{ marginTop: "50px" }}>
             <b>Copyright 2022 @ LMS. All Rights Reserved.. </b>
@@ -236,6 +235,9 @@ const USERID = localStorage.getItem("UserID");
             </div>
           </div>
         </footer>
+      </div> */}
+      <div style={{ marginLeft: "119px" }}>
+        <Footer />
       </div>
     </>
   );

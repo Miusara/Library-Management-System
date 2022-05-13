@@ -26,10 +26,10 @@ function MemberHome() {
         <div class="boxh">
            
             <a href="/get" class="button"><span>Borrow Books</span></a>
-            <a href="#" class="button"><span>Return Books</span></a>
+            <a href="/TransactionHistory" class="button"><span>Return Books</span></a>
             <a href="/get" class="button"><span>Search Books</span></a>
             <a href="/AddEBooks" class="button"><span>E-Books</span></a>
-            <a href="#" class="button"><span>Payments</span></a>
+            <a href="/PaymentHome" class="button"><span>Payments</span></a>
             <a href="/admin" class="button"><span>Log Out</span></a>
 
         </div>

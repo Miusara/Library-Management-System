@@ -16,7 +16,7 @@ export default function Navbar() {
 <br></br>
 
     <div class="button2"style={{width:"1000px"}}>
-            <Link to={"/"}><button type='submit'style={{background:"#cc9900",color:"#ffff"}} className='btn'>LOG OUT</button></Link>
+            <Link to={"/"}><button type='submit'style={{background:"#cc9900",color:"#ffff",left:"-5px"}} className='btn'>LOG OUT</button></Link>
         </div>
 <br></br><br></br> <br></br><br></br> <br></br><br></br>
 

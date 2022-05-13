@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../Books/Navbar";
+import Navbar from "../Payment/Navbar";
 import Footer from "../Books/Footer";
 
 function PaymentHome() {
@@ -8,15 +8,17 @@ function PaymentHome() {
     <>
       <Navbar />
 
+
       <div className="pg1">
-        <Link to="/PaymentHistory">
-        <button
-          type="submit"
-          className="btn btn-success"
-          style={{marginLeft:"1300px"}}
-        >
-         Payment History
-        </button>
+      <Link to="/PaymentHistory">
+          <input
+            type="submit"
+            className="btn btn-success"
+            // style={{ marginTop: "-100px"}}
+            value="Payment History"
+          />
+            
+  
         </Link>
         <div className="box2">
           <div className="button" style={{ marginTop: "250px" }}>
@@ -32,7 +34,8 @@ function PaymentHome() {
         </div>
       </div>
 
-      <div className="footer2">
+
+      {/* <div className="footer2">
         <footer>
           <div className="p" style={{ marginTop: "300px" }}>
             <b>Copyright 2022 @ LMS. All Rights Reserved.. </b>
@@ -49,6 +52,9 @@ function PaymentHome() {
             </div>
           </div>
         </footer>
+      </div> */}
+      <div style={{ marginLeft: "119px" }}>
+        <Footer />
       </div>
     </>
   );

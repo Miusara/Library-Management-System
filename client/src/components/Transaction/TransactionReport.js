@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-import Navbar from "../Books/Navbar";
+import Navbar from "../Transaction/Navbar";
 
 const UserID = localStorage.getItem("LocalUserID");
 

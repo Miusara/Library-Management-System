@@ -58,7 +58,11 @@ export default function Updatefee() {
           <div className="container">
             <form
               className="form-control"
-              style={{ background: " #CCDEFF" }}
+              style={{
+                background: " #CCDEFF",
+                right: "260px",
+                width: "1000px",
+              }}
               onSubmit={formSubmitHandler}
             >
               <div className="modal-body">
@@ -211,32 +215,18 @@ export default function Updatefee() {
                   </div>
                 </div>
                 <br/>
-                <button type="submit" className="btn btn-outline-success waves-effect waves-light float-right">
-                  Update Payment
-                </button>
+                <input type="submit" className="btn btn-outline-success waves-effect waves-light float-right" value="Update Payment"/>
+              
+           
               </div>
             </form>
           </div>
           &nbsp;&nbsp;&nbsp;
         </div>
       </div>
-      <div className="footer2">
-        <footer>
-          <div className="p" style={{ marginTop: "50px" }}>
-            <b>Copyright 2022 @ LMS. All Rights Reserved.. </b>
-          </div>
-          <div className="sbuttons" style={{ marginTop: "50px" }}>
-            <div align="right" className="socialbtns">
-              <a href="#" className="fa fa-lg fa-facebook"></a>
-              <a href="#" className="fa fa-lg fa-twitter"></a>
-              <a href="#" className="fa fa-lg fa-instagram"></a>
-              <a
-                href="https://www.youtube.com/"
-                className="fa fa-lg fa-youtube"
-              ></a>
-            </div>
-          </div>
-        </footer>
+ 
+      <div style={{ marginLeft: "119px" }}>
+        <Footer />
       </div>
     </>
   );

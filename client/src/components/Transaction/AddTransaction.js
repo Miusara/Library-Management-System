@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Navbar from "../Books/Navbar";
+import Navbar from "../Transaction/Navbar";
 import { Link } from "react-router-dom";
+import Footer from "../Books/Footer";
 
 export default function AddTransaction() {
-  const USERID= localStorage.getItem("UserID");
+  const USERID = localStorage.getItem("UserID");
 
   const [Username, setUsername] = useState("");
   const [BookID, setBookID] = useState("");
@@ -38,20 +39,22 @@ export default function AddTransaction() {
       <Navbar />
       <br />
       <Link to="/TransactionHistory">
-        <button
+        <input
           type="submit"
           className="btn btn-success"
-          style={{marginLeft:"1300px"}}
-        >
-         Transaction History
-        </button>
-        </Link>
+          value="Transaction History"
+        />
+      </Link>
       <div className="container-height">
-        <div className="col-lg-8 col-md m-auto">
-          <div className="container">
+        <div className="col-lg-8 col-md m-a">
+          <div className="contain">
             <form
-              className="form-control"
-              style={{ background: " #CCDEFF" }}
+              className="form"
+              style={{
+                background: " #CCDEFF",
+                right: "260px",
+                width: "1000px",
+              }}
               onSubmit={formSubmitHandler}
             >
               <div className="modal-body">
@@ -64,7 +67,6 @@ export default function AddTransaction() {
                   <div className="col-sm-7">
                     <input
                       value={USERID}
-                 
                       type="text"
                       className="form-control"
                       id="CardName"
@@ -148,35 +150,19 @@ export default function AddTransaction() {
                 <br />
 
                 <br />
-                <button
+                <input
                   type="submit"
                   className="btn btn-outline-success waves-effect waves-light float-right"
-                >
-                  ADD Transaction
-                </button>
+                  value=" ADD Transaction"
+                />
               </div>
             </form>
           </div>
           &nbsp;&nbsp;&nbsp;
         </div>
       </div>
-      <div className="footer2">
-        <footer>
-          <div className="p" style={{ marginTop: "80px" }}>
-            <b>Copyright 2022 @ LMS. All Rights Reserved.. </b>
-          </div>
-          <div className="sbuttons" style={{ marginTop: "80px" }}>
-            <div align="right" className="socialbtns">
-              <a href="#" className="fa fa-lg fa-facebook"></a>
-              <a href="#" className="fa fa-lg fa-twitter"></a>
-              <a href="#" className="fa fa-lg fa-instagram"></a>
-              <a
-                href="https://www.youtube.com/"
-                className="fa fa-lg fa-youtube"
-              ></a>
-            </div>
-          </div>
-        </footer>
+      <div style={{ marginLeft: "119px" }}>
+        <Footer />
       </div>
     </>
   );

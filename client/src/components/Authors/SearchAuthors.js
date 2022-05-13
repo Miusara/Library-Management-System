@@ -66,7 +66,7 @@ export default function SearchAuthors() {
                                             />
                                             </Col>
                                           
-                                                <button className="btn " type="submit" style={{right:"660px",top:"90px",width:"150px",background:"#cc9900",color:"#ffff"}}onClick={getAuthors}>Search Author</button>
+                                                <button className="btn " type="submit" style={{right:"660px",top:"101px",width:"150px",background:"#cc9900",color:"#ffff"}}onClick={getAuthors}>Search Author</button>
                                           
                                         </Row>
                                     </div>&nbsp;&nbsp;&nbsp;  

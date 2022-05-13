@@ -54,7 +54,7 @@ export default function UpdateUser() {
             
         }) .then(()=>{
             alert("User Updated Successfully!!");
-        window.location="/user";
+        window.location="/user1";
         })
     }
 

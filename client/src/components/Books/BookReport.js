@@ -113,7 +113,7 @@ export default function BookReport() {
                                                 </table>
                                             </div><br /><br></br>
                                         <center>
-                                            <button type="print" className="btn" style={{width:"200px" , top:"610px", right:"680px",background:"#cc9900",color:"#ffff"}}onClick={() => generatePDF(filteredData)}>Generate Report</button>
+                                            <button type="print" className="btn" style={{width:"200px" , top:"720px", right:"680px",background:"#cc9900",color:"#ffff"}}onClick={() => generatePDF(filteredData)}>Generate Report</button>
                                         </center>&nbsp;&nbsp;&nbsp; 
                                 </div>
                             </div>

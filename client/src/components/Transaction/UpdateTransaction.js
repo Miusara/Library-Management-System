@@ -2,16 +2,20 @@ import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "../Books/Navbar";
 import { Link } from "react-router-dom";
+import Footer from "../Books/Footer";
 
 export default function AddTransaction() {
-  const USERID= localStorage.getItem("UserID");
-  const Transactionid= localStorage.getItem("Transactionid");
-
+  const USERID = localStorage.getItem("UserID");
+  const Transactionid = localStorage.getItem("Transactionid");
 
   const [Username, setUsername] = useState(localStorage.getItem("Username"));
   const [BookID, setBookID] = useState(localStorage.getItem("BookID"));
-  const [Borrowdate, setBorrowdate] = useState(localStorage.getItem("Borrowdate"));
-  const [ReturnDate, setReturnDate] = useState(localStorage.getItem("ReturnDate"));
+  const [Borrowdate, setBorrowdate] = useState(
+    localStorage.getItem("Borrowdate")
+  );
+  const [ReturnDate, setReturnDate] = useState(
+    localStorage.getItem("ReturnDate")
+  );
 
   function formSubmitHandler(e) {
     e.preventDefault();
@@ -26,7 +30,10 @@ export default function AddTransaction() {
 
     console.log("newAssignment", newAssignment);
     axios
-      .put(`http://localhost:8089/Transaction/updateTransaction/${Transactionid}`, newAssignment)
+      .put(
+        `http://localhost:8089/Transaction/updateTransaction/${Transactionid}`,
+        newAssignment
+      )
       .then(() => {
         alert("Transaction Updated Succesfully !!");
         window.location = "/TransactionHistory";
@@ -40,20 +47,23 @@ export default function AddTransaction() {
       <Navbar />
       <br />
       <Link to="/TransactionHistory">
-        <button
+        <input
           type="submit"
           className="btn btn-success"
-          style={{marginLeft:"1300px"}}
-        >
-         Transaction History
-        </button>
-        </Link>
+          style={{ marginLeft: "1300px" }}
+          value="  Transaction History"
+        />
+      </Link>
       <div className="container-height">
         <div className="col-lg-8 col-md m-auto">
           <div className="container">
             <form
               className="form-control"
-              style={{ background: " #CCDEFF" }}
+              style={{
+                background: " #CCDEFF",
+                right: "260px",
+                width: "1000px",
+              }}
               onSubmit={formSubmitHandler}
             >
               <div className="modal-body">
@@ -66,7 +76,6 @@ export default function AddTransaction() {
                   <div className="col-sm-7">
                     <input
                       value={USERID}
-                 
                       type="text"
                       className="form-control"
                       id="CardName"
@@ -150,35 +159,21 @@ export default function AddTransaction() {
                 <br />
 
                 <br />
-                <button
+                <input
                   type="submit"
                   className="btn btn-outline-success waves-effect waves-light float-right"
-                >
-                  Update Transaction
-                </button>
+                  value="Update Transaction"
+                />
+                  
+     
               </div>
             </form>
           </div>
           &nbsp;&nbsp;&nbsp;
         </div>
       </div>
-      <div className="footer2">
-        <footer>
-          <div className="p" style={{ marginTop: "80px" }}>
-            <b>Copyright 2022 @ LMS. All Rights Reserved.. </b>
-          </div>
-          <div className="sbuttons" style={{ marginTop: "80px" }}>
-            <div align="right" className="socialbtns">
-              <a href="#" className="fa fa-lg fa-facebook"></a>
-              <a href="#" className="fa fa-lg fa-twitter"></a>
-              <a href="#" className="fa fa-lg fa-instagram"></a>
-              <a
-                href="https://www.youtube.com/"
-                className="fa fa-lg fa-youtube"
-              ></a>
-            </div>
-          </div>
-        </footer>
+      <div style={{ marginLeft: "119px" }}>
+        <Footer />
       </div>
     </>
   );

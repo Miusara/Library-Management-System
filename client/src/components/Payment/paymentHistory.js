@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./PaymentHistory.css";
 import axios from "axios";
-import Navbar from "../Books/Navbar";
+import Navbar from "../Payment/Navbar";
 import Footer from "../Books/Footer";
 
 class PaymentHistory extends Component {
@@ -88,6 +88,7 @@ class PaymentHistory extends Component {
   }
 
   onSearch(event) {
+    console.log("onSearch");
     event.preventDefault();
     const name = this.state.searchname;
     console.log(name);
@@ -116,37 +117,33 @@ class PaymentHistory extends Component {
     return (
       <>
         <Navbar />
-        <form
-          className="example"
-          onSubmit={this.onSearch}
-          style={{ marginTop: "90px", marginLeft: "90px", marginRight: "80px" }}
-        >
-          <input
-            type="text"
-            placeholder="Type Payment Title..."
-            name="searchname"
-            value={this.state.searchname}
-            onChange={this.onChange}
-          />
-          <button type="submit" className="btn btn-primary">
-            Search
-          </button>
-        </form>
-        {/* <label className="text-black">Search:</label>
-        <input type="text" /> */}
+        <br />
+        <br />
+        <label className="text-black">Search: </label>
+        <input
+          type="text"
+          onChange={this.onChange}
+          value={this.state.searchname}
+          name="searchname"
+          placeholder="Type Payment Title..."
+          style={{ marginLeft: "20px", marginRight: "5px" }}
+        />
+        <input type="submit" value="Submit" onClick={this.onSearch} />
+        <br />
         <br />
         <br />
         <div className="container">
           <a href="/PaymentHome">
-            <button
-              style={{ marginLeft: "0px", marginTop: "30px" }}
+            <input
+              // style={{ marginLeft: "0px", marginTop: "30px" }}
               class="btn btn-success"
-            >
-              New Payment
-            </button>
+              value="New Payment"
+            />
+    
+          
           </a>
 
-          <div className="row" style={{ marginTop: "10px" }}>
+          <div className="row" style={{ marginTop: "20px" }}>
             <div className="col-12">
               <table className="table table-bordered">
                 <thead>
@@ -172,7 +169,7 @@ class PaymentHistory extends Component {
                         <td>{item.Amount}</td>
 
                         <td>
-                          <button
+                          <input
                             type="button"
                             className="w3-button w3-orange"
                             onClick={(e) =>
@@ -190,17 +187,19 @@ class PaymentHistory extends Component {
                                 item.paymentTitle
                               )
                             }
-                          >
-                            Update
-                          </button>
-                          <button
+                            value="Update"
+                         />
+                            
+                         
+                          <input
                             type="button"
                             className="w3-button w3-red"
                             style={{ marginLeft: "10px" }}
                             onClick={(e) => this.onDelete(e, item._id)}
-                          >
-                            Delete
-                          </button>
+                            value="Delete"
+                          />
+                            
+                         
                         </td>
                       </tr>
                     ))}
@@ -211,33 +210,20 @@ class PaymentHistory extends Component {
         </div>
         <br />
         <a href="/PaymentReport">
-          <button
+          <input
             type="button"
             className="w3-button w3-blue"
-            // style={{ marginLeft: "1200px", marginTop: "-120px" }}
-          >
-            Genarate Report
-          </button>
+          
+            value="Genarate Report"
+          />
+            
+       
         </a>
         <br /> <br />
-        <div className="footer2">
-          <footer>
-            <div className="p" style={{ marginTop: "0px" }}>
-              <b>Copyright 2022 @ LMS. All Rights Reserved.. </b>
-            </div>
-            <div className="sbuttons" style={{ marginTop: "0px" }}>
-              <div align="right" className="socialbtns">
-                <a href="#" className="fa fa-lg fa-facebook"></a>
-                <a href="#" className="fa fa-lg fa-twitter"></a>
-                <a href="#" className="fa fa-lg fa-instagram"></a>
-                <a
-                  href="https://www.youtube.com/"
-                  className="fa fa-lg fa-youtube"
-                ></a>
-              </div>
-            </div>
-          </footer>
+        <div style={{ marginLeft: "119px" }}>
+          <Footer />
         </div>
+
       </>
     );
   }
