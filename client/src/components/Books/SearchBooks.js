@@ -65,7 +65,7 @@ export default function SearchBooks() {
                                             />
                                             </Col>
                                             <Col md={1}>
-                                                <button className="btn" type="submit"  style={{right:"690px",top:"90px",width:"120px",background:"#cc9900",color:"#ffff"}}onClick={getBooks}>Search Book</button>
+                                                <button className="btn" type="submit"  style={{right:"690px",top:"102px",width:"120px",background:"#cc9900",color:"#ffff"}}onClick={getBooks}>Search Book</button>
                                             </Col>
                                         </Row>
                                     </div>&nbsp;&nbsp;&nbsp;  
