@@ -14,7 +14,7 @@ function Header(){
         
       <li><a class="active" href="/member">Home</a></li>
       <li><a href="/recommend" >Recommendation Books</a></li>
-      <li><a href="#Available Bookst">Available Books</a></li>
+      <li><a href="/AllBooks">Available Books</a></li>
       <li><a href="/AllAuthors">Authors</a></li>
       <li><a href="/Borrowed">Report</a></li>
     </div>
