@@ -1,4 +1,15 @@
 # Library-Management-System
 
-This Online Library Management System is an Automated Library System that handles the various functions of the library. The librarian uses a computerized system to manage the library, where he / she can manage & track the daily work of the library such as issuing books, return books, collection of new books etc.,In addition, the system includes detailed information of refunded books, the date on which the user must return the books and the fees associated with them. 
-If the user's position is an administrator, the user can generate various types of records such as lists of registered students, book list, payment details, issue and return reports. 
+<p> This Online Library Management System is an Automated Library System that handles the various functions of the library.Its mainly handled User Management Function, Book Manangement Function, Payment Management Function and Transaction Management Function.</p>
+
+<b>Tools and Technology</b>
+<ul>
+  <li>MongoDB</li>
+  <li>  Express </li>
+  <li>  React </li>
+  <li>  NodeJS </li>
+  <li> VS Code</li>
+  <li> Postman</li>
+ </ul>
+  <hr>
+  Group Members : IT20173036 - H.T.D.P.Peiris IT20165970 - I.E.Wickramarathna IT20150198 - A.K.M.M.M.Mudalige IT20182946 - S.A.V.M.Samarasinghe
